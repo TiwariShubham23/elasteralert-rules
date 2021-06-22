@@ -6,8 +6,8 @@ timeframe:
  hours: 1
 filter:
 - term:
-    alevel: info
+    level: info
 alert:
 - "slack"
 slack:
-slack_webhook_url: "https://hooks.slack.com/services/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"
+slack_webhook_url: "https://hooks.slack.com/services/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"
