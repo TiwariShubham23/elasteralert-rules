@@ -1,0 +1,13 @@
+name: kibana slack alerts
+type: frequency
+index: winston_*
+num_events: 2
+timeframe:
+ hours: 1
+filter:
+- term:
+    alevel: info
+alert:
+- "slack"
+slack:
+slack_webhook_url: "https://hooks.slack.com/services/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"
