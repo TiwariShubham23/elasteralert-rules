@@ -16,7 +16,22 @@
 
         deactivate
 ---
-    
+
 ## Create Dockerfile:
 
+1. Remove dangling images from docker build: 
 
+       sudo docker rmi $(sudo docker images -f “dangling=true” -q)
+
+2. Get inside docker container:
+
+    1. Get container: 
+            
+           sudo docker ps
+
+    2. Get inside container: 
+        
+           sudo docker exec -it <container-id> /bin/bash
+13.71.110.1
+
+sudo docker build --build-arg host=13.71.110.1 -t elastalert:1.0 ./DockerFiles/

@@ -11,6 +11,6 @@ RUN pip install elastalert
 ADD "https://github.com/TiwariShubham23/elasteralert-rules.git" latest_commit
 RUN git clone https://github.com/TiwariShubham23/elasteralert-rules.git
 RUN ls elasteralert-rules
-RUN python3 -m elastalert.elastalert --verbose --config elasteralert-rules/config.yml --rule elasteralert-rules/rules/example_frequency.yaml
-
-#CMD [python3 -m elastalert.elastalert --verbose --config elasteralert-rules/config.yml --rule elasteralert-rules/rules/example_frequency.yaml]
+ARG host
+# CMD python3 -m elastalert.elastalert --verbose --config elasteralert-rules/config.yml --rule elasteralert-rules/rules/example_frequency.yaml
+CMD python3 --version
